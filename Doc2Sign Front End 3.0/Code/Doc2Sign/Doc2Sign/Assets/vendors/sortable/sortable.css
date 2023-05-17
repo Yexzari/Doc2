@@ -1,0 +1,354 @@
+
+.visualizador{
+    display: flex;
+	justify-content: space-between;
+    position:relative;
+}
+
+#contenedor
+{
+    z-index:1;
+}
+
+.pag {
+    z-index:1;
+}
+
+/*.navigation-header{
+    padding: 10px 0;
+    position: fixed;
+    height: 45px;
+    background-color: #FFFFFF;
+    width: 100%;
+}
+.navigation-header img{
+    width: 120px;
+    height: 32px;
+}*/
+
+.accion-top{
+    position: fixed;
+    padding: 5px;
+    text-align: center;
+    background-color:  rgba(22, 22, 112, 0.2);
+    width: 100%;
+    color: #FFFFFF;
+    z-index: 1;
+}
+
+.logo-cont{
+    padding-left: 12px;
+}
+
+.acciones{
+    height: calc(100vh - 90px);
+    border-radius: 0.8rem;
+    width: 160px;
+    z-index: 1;
+}
+.fixed{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 50px;
+    padding: 20px 6px;
+    text-align: center;
+    width: 142px;
+    color: #3B3B75;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.fixed ul{
+    position: relative;
+}
+
+.fixed li{
+    list-style-type: none;
+}
+
+.icon-sortable {
+    background-color: rgba(22, 22, 112, 0.2);
+    text-align: center;
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 0.8rem;
+    transition: background 0.3s;
+    font-size: 11px;
+    z-index: 9999;
+    width: 70px;
+    height: 70px;
+    margin: 20px 10px;
+    cursor: pointer;
+}
+.icon-sortable svg{
+    color: #7B7BF7;
+    fill: #7B7BF7;
+    font-size: 11px;
+}
+.icon-sortable.sdo {
+    margin-top: 45px;
+}
+
+.txt_accion{
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 5px;
+    font-size: 11px;
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+}
+.txt_accion.fr{
+    top: 20px;
+}
+
+.esclone{
+    cursor: pointer;
+}
+.esclone .txt_accion.fr {
+    top: 38px !important;
+}
+
+.txt_accion.sdo{
+    top: 24px;
+}
+
+.txt_accion.cto{
+    top: 20px;
+}
+
+.contenido-img{
+    width: 100%;
+    padding: 50px 80px;
+    background-color: #ededed;
+}
+
+.contenido-img frame{
+    height: 100vh;
+}
+
+.contenido-img-frame {
+    width: 100%;
+    padding: 35px 0;
+    background-color: #ededed;
+}
+
+.contenido-img img,
+.contenido-img-frame img{
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+
+.firmantes{
+    color: #161670;
+    text-align: left;
+}
+    .firmantes p {
+        font-size: 14px;
+        font-weight: 600;
+        padding: 10px;
+        text-align: center;
+        border: solid 1px #1D1464;
+    }
+
+.txt_firmantes {
+    display: block;
+    padding: 0 5px;
+    margin-top: 0;
+    font-size: 11px;
+    z-index: 9999;
+    position: relative;
+    width: 100%;
+}
+
+.accordion {
+    background: #EFEFEF;
+    cursor: pointer;
+    padding: 13px 0;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 13px;
+    transition: 0.4s;
+
+}
+  
+  .active, .accordion:hover {
+    color: #7B7BF7;
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+  }
+
+
+/* Ventana modal */
+/*.modal {
+    display: none;
+    position: fixed;
+    z-index: 1; 
+    padding-top: 200px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}*/
+
+.contenido-modal {
+    position: relative;
+    background-color: #FFFFFF;
+    margin: auto; 
+    padding: 50px 50px 0;
+    width: 60%;
+    -webkit-animation-name: animarsuperior;
+    -webkit-animation-duration: 0.5s;
+    animation-name: animarsuperior;
+    animation-duration: 0.5s
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animarsuperior {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.close-icon{
+    text-align: right;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: -35px;
+    margin-bottom: 15px;
+}
+.cerrar{
+    cursor: pointer;
+}
+.close {
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.buttons{
+    min-width: 700px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.txt_modal{
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 5px;
+    font-size: 11px;
+    z-index: 9999;
+}
+
+.cont-btns{
+    display: grid;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 25px;
+
+}
+.formulario > .checkbox {
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc; 
+}
+
+.btn-modal{
+    text-align: right;
+    padding: 15px 0;
+}
+
+.btn-modal button{
+    background: #161670;
+    width: 145px;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px 15px;
+    line-height: 14px;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.formulario .radio label,
+.formulario .checkbox label {
+    display: inline-block;
+    cursor: pointer;
+    color: #7B7BF7;
+    position: relative;
+    padding: 5px 15px 5px 51px;
+    font-size: 1em;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; 
+}
+
+.formulario .radio label:hover,
+.formulario .checkbox label:hover {
+    background: rgba(22, 22, 112, 0.2);
+}
+
+.formulario .radio label:before,
+.formulario .checkbox label:before {
+    content: "";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    left: 15px;
+    border-radius: 50%;
+    background: none;
+    border: 3px solid #7B7BF7; 
+}
+.formulario .checkbox svg{
+    display: none;
+}
+.formulario .checkbox label:before {
+    border-radius: 3px; 
+}
+.formulario .checkbox input[type="checkbox"] {
+    display: none; 
+}
+.formulario .checkbox input[type="checkbox"]:checked + label:before {
+    display: none; 
+}
+.formulario .checkbox input[type="checkbox"]:checked + label {
+    background: #7B7BF7;
+    color: #fff;
+    padding: 5px 15px; 
+}
+.formulario .checkbox input[type="checkbox"]:checked + label svg{
+    fill: #fff;
+    display: inline-grid;
+}
